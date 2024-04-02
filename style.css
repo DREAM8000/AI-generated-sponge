@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tv {
+    width: 800px;
+    height: 500px;
+    border: 20px solid #333;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.screen iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.people {
+    width: 30%;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    float: left;
+    padding: 20px;
+}
+
+.person {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.person::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 10px;
+}
+
+.person.afk::before {
+    background-color: orange;
+}
